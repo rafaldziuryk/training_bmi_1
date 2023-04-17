@@ -112,6 +112,22 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Container(
                     color: Colors.white24,
                     height: 200,
+                    child: Stack(
+                      children: [
+                        Positioned.fill(
+                            child: Icon(
+                              Icons.woman,
+                              size: 150,
+                            )),
+                        Positioned(
+                            right: 8,
+                            top: 8,
+                            child: Icon(
+                              Icons.check_circle,
+                              color: Colors.grey,
+                            )),
+                      ],
+                    ),
                   ),
                 ),
               ],
