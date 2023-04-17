@@ -78,8 +78,31 @@ class _MyHomePageState extends State<MyHomePage> {
               children: <Widget>[
                 Expanded(
                   child: Container(
-                    color: Colors.white24,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(8)),
+                      border: Border.all(
+                        color: Colors.greenAccent,
+                        width: 2,
+                      ),
+                      color: Colors.white24,
+                    ),
                     height: 200,
+                    child: Stack(
+                      children: [
+                        Positioned.fill(
+                            child: Icon(
+                          Icons.man,
+                          size: 150,
+                        )),
+                        Positioned(
+                            right: 8,
+                            top: 8,
+                            child: Icon(
+                              Icons.check_circle,
+                              color: Colors.green,
+                            )),
+                      ],
+                    ),
                   ),
                 ),
                 SizedBox(
