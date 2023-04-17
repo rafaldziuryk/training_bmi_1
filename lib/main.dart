@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
+        brightness: Brightness.dark,
         primarySwatch: Colors.blue,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
+
   final String title;
 
   @override
@@ -38,21 +40,61 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
         backgroundColor: Colors.black,
         leading: IconButton(
           icon: Icon(Icons.menu),
-          onPressed: (){},
+          onPressed: () {},
         ),
         actions: [
           IconButton(
             icon: Icon(Icons.access_alarm),
-            onPressed: (){},
+            onPressed: () {},
           ),
         ],
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(24.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            Text(
+              "BMI Calculator",
+              style: TextStyle(
+                fontSize: 36,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(
+              height: 40,
+            ),
+            Text("Gender"),
+            SizedBox(
+              height: 8,
+            ),
+            Row(
+              children: <Widget>[
+                Expanded(
+                  child: Container(
+                    color: Colors.white24,
+                    height: 200,
+                  ),
+                ),
+                SizedBox(
+                  width: 16,
+                ),
+                Expanded(
+                  child: Container(
+                    color: Colors.white24,
+                    height: 200,
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
