@@ -116,9 +116,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       children: [
                         Positioned.fill(
                             child: Icon(
-                              Icons.woman,
-                              size: 150,
-                            )),
+                          Icons.woman,
+                          size: 150,
+                        )),
                         Positioned(
                             right: 8,
                             top: 8,
@@ -128,6 +128,34 @@ class _MyHomePageState extends State<MyHomePage> {
                             )),
                       ],
                     ),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 24,
+            ),
+            Text("Weight"),
+            SizedBox(
+              height: 8,
+            ),
+            Row(
+              children: <Widget>[
+                Flexible(
+                  flex: 2,
+                  child: Container(
+                    height: 50,
+                    color: Colors.grey.shade100,
+                  ),
+                ),
+                SizedBox(
+                  width: 16,
+                ),
+                Flexible(
+                  flex: 1,
+                  child: Container(
+                    height: 50,
+                    color: Colors.grey.shade100,
                   ),
                 ),
               ],
