@@ -58,6 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Padding(
         padding: const EdgeInsets.all(24.0),
         child: Column(
+          mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Text(
@@ -146,6 +147,54 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Container(
                     height: 50,
                     color: Colors.grey.shade100,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Icon(Icons.remove_circle, color: Colors.black),
+                        SizedBox(
+                            width: 100,
+                            child: TextField(
+                              style: TextStyle(color: Colors.black),
+                            )),
+                        Icon(Icons.add_circle, color: Colors.black),
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: 16,
+                ),
+                Flexible(
+                  flex: 1,
+                  child: Container(
+                    height: 50,
+                    color: Colors.grey.shade100,
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 16,
+            ),
+            Row(
+              children: <Widget>[
+                Flexible(
+                  flex: 2,
+                  child: Container(
+                    height: 50,
+                    color: Colors.grey.shade100,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Icon(Icons.remove_circle, color: Colors.black),
+                        SizedBox(
+                            width: 100,
+                            child: TextField(
+                              style: TextStyle(color: Colors.black),
+                            )),
+                        Icon(Icons.add_circle, color: Colors.black),
+                      ],
+                    ),
                   ),
                 ),
                 SizedBox(
